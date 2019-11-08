@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>NVL-JS-P9b</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+	
+		var dia = 'Lunes,Martes,Miercoles,Jueves,Viernes,Sabado,Domingo';
+		var lugar = 'Madrid.Sevilla.Barcelona.Valencia.Zaragoza.Bilbao.Donosti';
+    	
+    	dia = dia.split(',');
+    	lugar = lugar.split('.');
+    	
+    	
+    	var matriz = [[,]];    	
+    	matriz.pop();
+    	//Creamos un bucle para ir introduciendo los pares de datos, dia y ciudad
+    	for (var i = 0; i < dia.length; i++) {
+    	// datos con el método push
+    		matriz.push([dia[i],lugar[i]]);
+    	}
+    	// Para mostrar  los valores en el documento html:
+    	
+    	document.write('<table style="text-align:center""><tr><th>Día</th><th>Ciudad</th></tr>');
+    	// bucle para recorrer todos los elementos de la matriz
+    	for (var i = 0; i < matriz.length; i++) {
+    		// escribimos una fila con los datos ( una por cada elemento)
+    		document.write('<tr>');
+    		document.write('<td>' + matriz[i][0] + '</td>');
+    		document.write('<td>' + matriz[i][1] + '</td>');
+    		document.write('</tr>');
+    	}
+   
+    	document.write('</table>');
+    </script>
+</body>
+</html>
